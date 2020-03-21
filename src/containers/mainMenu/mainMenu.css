@@ -1,0 +1,13 @@
+.main-menu {
+    display: flex;
+}
+
+.main-menu-center {
+    flex-grow: 1;
+    background: linear-gradient(90deg, #00a39a, #0e9ecd);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e8f6f6;
+    padding: 0 20px;
+}

@@ -1,0 +1,12 @@
+.main-menu-navigation {
+    display: flex;
+
+}
+
+.main-menu-entity {
+    display: flex;
+    align-items: center;
+    margin-left: 42px;
+    font-size: 30px;
+    font-weight: 600
+}

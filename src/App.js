@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Route, Switch} from 'react-router-dom';
+import MainMenu from './containers/mainMenu/mainMenu';
+import userPhoto from './user.png';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Broadcast from './pages/broadcast/broadcast';
+
+export default class App extends React.Component {
+
+	state = {
+		user: {}
+	}
+
+	componentDidMount() {
+		this.setState({
+			user: {
+				name: 'Kenny Lim',
+				status: 'Chat Daddy Limited',
+				photo: userPhoto
+			}
+		});
+	}
+	
+	render() {
+		return (
+			<div className="App">
+				<MainMenu user={this.state.user} />
+				<Switch>
+					<Route path="/" exact component={Broadcast} />
+				</Switch>
+			</div>
+		);
+	}
+	
 }
-
-export default App;

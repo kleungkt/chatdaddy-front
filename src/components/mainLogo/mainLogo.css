@@ -1,0 +1,11 @@
+.main-logo {
+    width: 205px;
+    height: 131px;
+    box-sizing: border-box;
+    padding: 20px 0 0 35px;
+    background: linear-gradient(90deg, #00a494, #00a39a);
+    border-right: 4px solid #009d94;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+}

@@ -1,0 +1,42 @@
+.pagination {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagin-page {
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    margin-right: 11px;
+    box-shadow: 3px 3px 30px 3px #edf0f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: #90aabf;
+    user-select: none;
+    cursor: pointer
+}
+
+.pagin-page-active {
+    color: #324d65
+}
+
+.pagin-points {
+    height: 40px;
+    margin-right: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px
+}
+
+.pagin-points img {
+    width: 20px;
+    opacity: 0.5;
+}
