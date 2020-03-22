@@ -1,0 +1,119 @@
+.right-menu {
+    width: 650px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1001;
+    box-shadow: 1px 20px 15px 4px #f5f5f5;
+}
+
+.right-top {
+    padding: 80px 70px 40px 70px;
+    box-sizing: border-box;
+}
+
+.right-title {
+    font-size: 50px;
+    color: #0094c5;
+    font-weight: 700;
+}
+
+.right-select {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.right-row-label {
+    font-size: 20px;
+    font-weight: 700;
+    color: #728494;
+}
+
+.right-select-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-segment {
+    width: 330px;
+    height: 70px;
+    background-color: #324d65;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.sending-speed {
+    width: 150px;
+    height: 70px;
+    background-color: #f7fafc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #324d65;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.right-center {
+    background-color: #f7fafc;
+    padding: 40px 0 200px 0;
+}
+
+.message-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.message-textarea {
+    width: 500px;
+    height: 100px;
+    resize: none;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 30px 3px #edf0f2;
+    color: #324d65;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.message-icons-block {
+    width: 35px;
+}
+
+.message-icons-block img {
+    cursor: pointer;
+}
+
+.right-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 60px
+}
+
+.right-bottom span {
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+}

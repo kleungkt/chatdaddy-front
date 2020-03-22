@@ -1,0 +1,31 @@
+.actions-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 120px;
+    margin-top: 50px;
+}
+
+.actions-menu-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actions-menu-img {
+    width: 75px;
+    height: 75px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 30px 3px #edf0f2;
+    cursor: pointer;
+}
+
+.actions-menu-label {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #324d65;
+    cursor: pointer;
+}

@@ -6,13 +6,18 @@ import Table from '../../components/table/table';
 import Pagination from '../../components/pagination/pagination';
 import PopMenu from '../../components/popMenu/popMenu';
 import Modal from '../../components/modal/modal';
+import RightMenu from '../../containers/rightMenu/rightMenu';
+
 
 export default class Broadcast extends React.Component {
 
     state = {
         status: 0,
         popMenu: {},
-        modal: false
+        modal: false,
+        rightMenu: {
+            open: false
+        }
     }
 
     statusClick = status => this.setState({status});
@@ -36,14 +41,27 @@ export default class Broadcast extends React.Component {
 
     clickModal = e => this.setState({modal: false});
 
+    newCampaign = e => {
+        this.setState({rightMenu: {
+            open: true
+        }})
+    }
+
+    closeRightMenu = () => this.setState({rightMenu: {open: false}});
+
     render() {
         return(
             <div className="broadcast">
+                <RightMenu status={this.state.rightMenu} closeRightMenu={this.closeRightMenu} />
                 <PopMenu popMenu={this.state.popMenu} clickPopMenu={this.clickPopMenu} />
                 <Modal modal={this.state.modal} clickModal={this.clickModal} />
                 <div className="broadcast-label">Broadcast Message</div>
-                <BroadcastHeader status={this.state.status} statusClick={this.statusClick} />
+                <BroadcastHeader 
+                    status={this.state.status} statusClick={this.statusClick} 
+                    newCampaign={this.newCampaign}
+                />
                 <Table 
+                    status={this.state.status}
                     getPopMenu={this.getPopMenu}
                     clickPopMenu={this.clickPopMenu}
                 />

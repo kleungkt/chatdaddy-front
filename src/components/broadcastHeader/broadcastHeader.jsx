@@ -5,7 +5,7 @@ const status = ['Draft', 'Scheduled', 'Completed'];
 
 export default props => (
     <div className="broadcast-header">
-        <div className="broadcast-header-button">New Campaign</div>
+        <div className="broadcast-header-button" onClick={props.newCampaign}>New Campaign</div>
         <div className="broadcast-header-status">
             {status.map((key, index) => (
                 <div key={index}

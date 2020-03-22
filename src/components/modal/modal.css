@@ -1,7 +1,7 @@
 .modal-title {
     color: #324d65;
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .modal-buttons {
@@ -12,7 +12,7 @@
 
 .modal-buttons div {
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 700;
     color: #90aabf;
     cursor: pointer;
     padding: 10px 15px;

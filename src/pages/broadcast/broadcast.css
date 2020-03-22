@@ -1,11 +1,12 @@
 .broadcast {
     box-sizing: border-box;
     padding: 75px 140px;
+    position: relative;
 }
 
 .broadcast-label {
     color: #324d65;
     font-size: 56px;
-    font-weight: 600;
+    font-weight: 700;
     margin-left: -2px;
 }
