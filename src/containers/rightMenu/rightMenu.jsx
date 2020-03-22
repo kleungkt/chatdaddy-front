@@ -1,10 +1,10 @@
 import React from 'react';
 import './rightMenu.css';
-import ActionsMenu from './actionsMenu/actionsMenu';
 import arrow from './img/arrow.png';
-import points from './img/points.png';
-import del from './img/del.png';
-import add from './img/add.png';
+
+import ActionsMenu from './actionsMenu/actionsMenu';
+import RowMenu from './rowMenu/rowMenu';
+
 
 const actionsRows = ['Message', 'Contact', 'Image', 'Audio'];
 
@@ -35,17 +35,10 @@ export default props => {
 				<div className="right-row-label"
 					style={{marginLeft: '70px'}}
 				>
-					Message
+					{props.rightRow}
 				</div>
-				<div className="message-block">
-					<img src={points} alt="points" />
-					<textarea className="message-textarea"></textarea>
-					<div className="message-icons-block">
-						<img src={add} alt="add" />
-						<img style={{marginTop: '-15px'}} src={del} alt="del" />
-					</div>
-				</div>
-				<ActionsMenu rows={actionsRows} />
+				<RowMenu status={{content: props.rightRow}} />
+				<ActionsMenu rows={actionsRows} rightRowClick={props.rightRowClick} />
 			</div>
 			<div className="right-bottom">
 				<div>

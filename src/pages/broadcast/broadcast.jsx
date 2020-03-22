@@ -17,7 +17,8 @@ export default class Broadcast extends React.Component {
         modal: false,
         rightMenu: {
             open: false
-        }
+        },
+        rightRow: 'Message'
     }
 
     statusClick = status => this.setState({status});
@@ -49,10 +50,16 @@ export default class Broadcast extends React.Component {
 
     closeRightMenu = () => this.setState({rightMenu: {open: false}});
 
+    rightRowClick = row => this.setState({rightRow: row});
+
     render() {
         return(
             <div className="broadcast">
-                <RightMenu status={this.state.rightMenu} closeRightMenu={this.closeRightMenu} />
+                <RightMenu status={this.state.rightMenu} 
+                    closeRightMenu={this.closeRightMenu} 
+                    rightRowClick={this.rightRowClick}
+                    rightRow={this.state.rightRow}
+                />
                 <PopMenu popMenu={this.state.popMenu} clickPopMenu={this.clickPopMenu} />
                 <Modal modal={this.state.modal} clickModal={this.clickModal} />
                 <div className="broadcast-label">Broadcast Message</div>

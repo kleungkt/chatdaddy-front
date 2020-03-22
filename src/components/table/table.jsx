@@ -5,8 +5,6 @@ import points from './img/points.png'
 
 export default props => {
 
-	console.log(props)
-
 	const getTr = (row, index) => {
 		return(
 			<div key={index} className="broadcast-row">
