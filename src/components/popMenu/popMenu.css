@@ -1,7 +1,7 @@
 .pop-menu {
-    width: 100px;
+    width: 70px;
     background-color: #ffffff;
-    padding: 10px 35px;
+    padding: 10px 25px;
     border-radius: 15px;
     box-shadow: 3px 3px 30px 3px #edf0f2;
     color: #324d65;
@@ -13,5 +13,5 @@
 
 .pop-menu div {
     cursor: pointer;
-    padding: 10px 0
+    padding: 5px 0
 }

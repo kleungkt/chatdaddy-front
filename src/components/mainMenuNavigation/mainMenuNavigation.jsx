@@ -6,7 +6,7 @@ export default props => (
 		{props.menu.map((key, index)=> (
         	<div key={index} className="main-menu-entity">
 				<img src={require('./img/'+key+'.png')} alt={key} title={key} />
-				<div style={{marginLeft: '30px'}}>{key}</div>
+				<div style={{marginLeft: '20px'}}>{key}</div>
 			</div>
     	))}
 	</div>

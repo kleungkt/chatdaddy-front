@@ -2,8 +2,10 @@
     width: 205px;
     height: 131px;
     box-sizing: border-box;
-    padding: 20px 0 0 35px;
-    background: linear-gradient(90deg, #00a494, #00a39a);
+    padding: 19px 0 0 50px;
+    background-image: url(./img/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     border-right: 4px solid #009d94;
     color: #ffffff;
     font-size: 24px;
