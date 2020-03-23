@@ -1,8 +1,9 @@
 import React from 'react';
 import './broadcast.css';
 
-import BroadcastHeader from '../../components/broadcastHeader/broadcastHeader';
-import Table from '../../components/table/table';
+import BroadcastHeader from './broadcastHeader/broadcastHeader';
+import BroadcastTable from './broadcastTable/broadcastTable';
+
 import Pagination from '../../components/pagination/pagination';
 import PopMenu from '../../components/popMenu/popMenu';
 import Modal from '../../components/modal/modal';
@@ -67,7 +68,7 @@ export default class Broadcast extends React.Component {
                     status={this.state.status} statusClick={this.statusClick} 
                     newCampaign={this.newCampaign}
                 />
-                <Table 
+                <BroadcastTable 
                     status={this.state.status}
                     getPopMenu={this.getPopMenu}
                     clickPopMenu={this.clickPopMenu}

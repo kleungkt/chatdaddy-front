@@ -1,0 +1,10 @@
+.main-menu-options {
+    display: flex;
+    width: 190px;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.main-menu-options {
+    cursor: pointer;
+}

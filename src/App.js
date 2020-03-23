@@ -5,6 +5,7 @@ import MainMenu from './containers/mainMenu/mainMenu';
 import userPhoto from './user.png';
 
 import Broadcast from './pages/broadcast/broadcast';
+import Audience from './pages/audience/audience';
 
 export default class App extends React.Component {
 
@@ -27,7 +28,8 @@ export default class App extends React.Component {
 			<div className="App">
 				<MainMenu user={this.state.user} />
 				<Switch>
-					<Route path="/" exact component={Broadcast} />
+					<Route path="/audience" component={Audience} />
+					<Route path="/message" component={Broadcast} />
 				</Switch>
 			</div>
 		);

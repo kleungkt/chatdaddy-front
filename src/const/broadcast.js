@@ -16,11 +16,11 @@ export const thead = [
     {
         Campaign: 350,
         'Targeted segment': 340,
-        'Start Time': 290,
+        'Start Time': 300,
         Delivered: 140,
         Read: 140,
         Replied: 140,
-        Action: 140
+        Action: 120
     }
 ];
 

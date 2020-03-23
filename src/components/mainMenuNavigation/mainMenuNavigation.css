@@ -1,6 +1,6 @@
 .main-menu-navigation {
     display: flex;
-
+    user-select: none;
 }
 
 .main-menu-entity {
@@ -8,5 +8,8 @@
     align-items: center;
     margin-left: 45px;
     font-size: 32px;
-    font-weight: 700
+    font-weight: 700;
+    cursor: pointer;
+    color: #e8f6f6;
+    text-decoration: none;
 }
