@@ -1,9 +1,7 @@
 import React from 'react';
 import './audience.css';
 import Pagination from '../../components/pagination/pagination';
-// import PopMenu from '../../components/popMenu/popMenu';
-// import Modal from '../../components/modal/modal';
-
+import ModalDelete from '../../components/modalDelete/modalDelete';
 import AudienceHeader from './audienceHeader/audienceHeader';
 import AudienceTable from './audienceTable/audienceTable';
 import BottomMenu from './bottomMenu/bottomMenu';
@@ -13,6 +11,7 @@ import WhiteMenu from './whiteMenu/whiteMenu';
 export default class Audience extends React.Component {
 
 	state = {
+		modalDelete: false,
 		checked: {},
 		bottomMenu: false,
 		move: true,
@@ -75,13 +74,17 @@ export default class Audience extends React.Component {
 			this.closeWhiteMenu();
 			return;
 		}
+		if(name === 'del') {
+			this.setState({modalDelete: true});
+			return;
+		}
 		const c = e.currentTarget.getBoundingClientRect();
 		let whiteMenu = {
 			menu: name,
 			style: {
 				width: name === 'input' || name === 'Everyone' ? c.width : 'auto',
 				left: name === 'points' ? c.x - 200 : c.x,
-				top: name === 'points' ? c.y - 100 : c.y + c.height,
+				top: name === 'points' ? c.y - 100 + window.pageYOffset : c.y + c.height + window.pageYOffset,
 			}
 		};
 		this.setState({whiteMenu});
@@ -95,10 +98,17 @@ export default class Audience extends React.Component {
 	clickWhiteMenu = e => {
 		this.closeWhiteMenu();
 	}
+
+	closeModal = e => this.setState({modalDelete: false});
 	
 	render() {
 		return(
-			<div className="audience">
+			<div className="audience" onScroll={this.wheel}>
+				<ModalDelete 
+					modal={this.state.modalDelete}
+                    clickModal={this.closeModal}
+                    title="Delete Contact"
+				/>
 				<WhiteMenu status={this.state.whiteMenu} clickWhiteMenu={this.clickWhiteMenu} />
 				<BottomSelect style={this.state.bottomSelect} />
 				<div className="audience-label">Audience</div>

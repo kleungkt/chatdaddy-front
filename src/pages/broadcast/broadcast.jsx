@@ -6,7 +6,7 @@ import BroadcastTable from './broadcastTable/broadcastTable';
 
 import Pagination from '../../components/pagination/pagination';
 import PopMenu from '../../components/popMenu/popMenu';
-import Modal from '../../components/modal/modal';
+import ModalDelete from '../../components/modalDelete/modalDelete';
 import RightMenu from '../../containers/rightMenu/rightMenu';
 
 
@@ -62,7 +62,11 @@ export default class Broadcast extends React.Component {
                     rightRow={this.state.rightRow}
                 />
                 <PopMenu popMenu={this.state.popMenu} clickPopMenu={this.clickPopMenu} />
-                <Modal modal={this.state.modal} clickModal={this.clickModal} />
+                <ModalDelete 
+                    modal={this.state.modal}
+                    clickModal={this.clickModal}
+                    title="Delete Campaign"
+                />
                 <div className="broadcast-label">Broadcast Message</div>
                 <BroadcastHeader 
                     status={this.state.status} statusClick={this.statusClick} 
