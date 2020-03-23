@@ -13,6 +13,7 @@
     box-sizing: border-box;
     transition: .4s;
     transform: translateY(100%);
+    user-select: none;
 }
 
 .bottom-menu-open {
@@ -43,4 +44,16 @@
     padding: 15px;
     border-radius: 15px;
     cursor: pointer;
+}
+
+.bottom-menu-select {
+    width: 255px;
+    margin-right: 25px;
+    margin-left: 270px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #93acc0;
+    font-size: 24px;
+    font-weight: 400;
 }

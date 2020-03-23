@@ -1,0 +1,30 @@
+.white-menu {
+    background-color: #ffffff;
+    padding: 10px 25px 0 25px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 30px 3px #edf0f2;
+    color: #324d65;
+    font-size: 18px;
+    position: fixed;
+    z-index: 1100;
+    color: #324d65;
+    user-select: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.white-menu-row {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.white-menu-row:hover {
+    color: #0092c3
+}
+
+.white-menu-list {
+    border-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 15px 15px 30px 3px #edf0f2;
+}

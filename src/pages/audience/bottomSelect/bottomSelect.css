@@ -1,0 +1,29 @@
+.bottom-select {
+    flex-direction: column;
+    width: 280px;
+    height: 200px;
+    box-shadow: 3px -7px 15px 2px #edf0f2;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: fixed;
+    background-color: #f7fafc;
+    z-index: 10;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.bottom-select-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.bottom-select-plus {
+    width: 16px;
+    height: 16px;
+    padding: 7px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}

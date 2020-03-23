@@ -48,7 +48,7 @@ export default props => {
                             <img key={index}
                                 src={require('../../../components/table/img/'+key+'.png')} alt="points" 
                                 style={{cursor: 'pointer'}}
-                                onClick={props.getPopMenu}
+                                onClick={props.getWhiteMenu.bind(this, key)}
                             />
                         ))}
                     </div>

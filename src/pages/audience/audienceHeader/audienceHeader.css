@@ -3,6 +3,7 @@
     margin-top: 37px;
     display: flex;
     justify-content: space-between;
+    user-select: none;
 }
 
 .audience-header-input {
