@@ -4,8 +4,11 @@ import Table from '../../../components/table/table';
 import {thead, tbody} from '../../../const/audience';
 
 import user from '../../../components/table/img/user.png';
+import check from '../../../components/table/img/check.png';
+
 
 const icons = ['message', 'action', 'del', 'points'];
+
 
 export default props => {
 
@@ -13,8 +16,14 @@ export default props => {
         <div className="main-body">
             {tbody(props.status).map((row, index) => (
                 <div key={index} className="main-row">
-                    <div style={{width: '80px'}} className="main-row-div">
-                        <div style={{padding: 0}} className="table-checkbox"></div>
+                    <div style={{width: '80px'}} className="main-row-div"
+                        onClick={props.check.bind(this, index)}
+                    >
+                        <div style={{padding: 0}} className="table-checkbox">
+                            <img src={check} alt="check" 
+                                style={{visibility: props.checked[index] ? 'visible': 'hidden'}}
+                            />
+                        </div>
                     </div>
                     <div style={{width: '270px'}} className="main-row-div main-row-div-user">
                         <img style={{marginRight: '15px'}} src={user} alt="user" />
@@ -26,7 +35,7 @@ export default props => {
                     <div style={{width: '180px'}} className="main-row-div">{row[1]}</div>
                     <div style={{width: '230px'}} className="main-row-div main-row-div-tag">
                         {row[2].map((key, index) => (
-                            <div className="tag-row">
+                            <div key={index} className="tag-row">
                                 {key}
                             </div>
                         ))}
@@ -49,6 +58,10 @@ export default props => {
     )
 
     return(
-        <Table thead={thead} tbody={body()} checkbox={true} />
+        <Table thead={thead} tbody={body()} 
+            checkbox={true} 
+            check={props.check} 
+            checked={props.checked}
+        />
     )
 }

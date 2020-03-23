@@ -8,9 +8,11 @@ export default props => (
 	<div className="audience-header">
 		<input className="audience-header-input" placeholder="Search..." />
 		<div className="audience-header-center">
-			<div className="audience-header-move">
-				<div className="audience-header-round"></div>
-				Individual
+			<div className={props.move ? 'audience-header-move' : 'audience-header-move audience-move'} 
+				onClick={props.moveClick}
+			>
+				<div className={props.move ? 'audience-header-round' : 'audience-header-round audience-header-round-right'}></div>
+				{props.move ? 'Individual' : 'Group'}
 			</div>
 			<div className="audience-header-center-menu">
 				{actions.map((key, index) => (
