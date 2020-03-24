@@ -1,0 +1,105 @@
+.modal-audience-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #324d65;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.modal-audience-button {
+    width: 90px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #009eca;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.modal-audience-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.modal-audience-input label, .modal-audience-label-one {
+    color: #728494;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.modal-audience-input input, .modal-audience-input-one {
+    height: 70px;
+    border-radius: 15px;
+    background-color: #f7fafc;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    padding-left: 25px;
+    font-weight: 700;
+    font-size: 20px;
+    box-sizing: border-box;
+    color: #708393;
+}
+
+.modal-audience-select {
+    margin-top: 15px;
+    background-color: #ffffff;
+    height: 70px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 30px 3px #edf0f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 25px;
+    color: #728494;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.modalaudience-row-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.modal-audience-row-button {
+    margin-top: 15px;
+    height: 70px;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 25px;
+    color: #ffffff;
+    background-color: #90aabf;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.modal-small-plus {
+    margin-top: 15px;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 35px;
+    box-shadow: 3px 3px 30px 3px #edf0f2;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.bplus {
+    width: 70px;
+    height: 70px;
+    margin: 40px 0 35px 270px;
+}

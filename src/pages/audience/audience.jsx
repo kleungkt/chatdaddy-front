@@ -7,10 +7,12 @@ import AudienceTable from './audienceTable/audienceTable';
 import BottomMenu from './bottomMenu/bottomMenu';
 import BottomSelect from './bottomSelect/bottomSelect';
 import WhiteMenu from './whiteMenu/whiteMenu';
+import ModalAudience from './modalAudience/modalAudience';
 
 export default class Audience extends React.Component {
 
 	state = {
+		title: 'Audience',
 		modalDelete: false,
 		checked: {},
 		bottomMenu: false,
@@ -24,7 +26,8 @@ export default class Audience extends React.Component {
 				display: 'none'
 			},
 			menu: ''
-		}
+		},
+		modal: ''
 	}
 
 	check = index => {
@@ -52,7 +55,7 @@ export default class Audience extends React.Component {
 	closeBottomMenu = () => this.setState({bottomMenu: false});
 
 	moveClick = e => {
-		this.state.move ? this.setState({move: false}) : this.setState({move: true});
+		this.state.move ? this.setState({move: false, title: 'Groups'}) : this.setState({move: true, title: 'Audience'});
 	}
 
 	bottomSelect = e => {
@@ -71,23 +74,32 @@ export default class Audience extends React.Component {
 
 	getWhiteMenu = (name, e) => {
 		if(name === 'input' && !e.currentTarget.value) {
-			this.closeWhiteMenu();
-			return;
+			this.closeWhiteMenu(); return;
 		}
-		if(name === 'del') {
-			this.setState({modalDelete: true});
-			return;
+		console.log(name)
+		switch(name) {
+			case 'Add contact' :
+			case 'Search Message History' :
+			case 'Add New Segment' :
+				this.closeWhiteMenu();
+				this.setState({modal: name});
+			break;
+			case 'del' :
+				this.setState({modalDelete: true});
+			break;
+			default : 
+				const c = e.currentTarget.getBoundingClientRect();
+				let whiteMenu = {
+					menu: name,
+					style: {
+						width: name === 'input' || name === 'Everyone' ? c.width : 'auto',
+						left: name === 'points' ? c.x - 200 : c.x,
+						top: name === 'points' ? c.y - 100 + window.pageYOffset : c.y + c.height + window.pageYOffset,
+					}
+				};
+				this.setState({whiteMenu});
 		}
-		const c = e.currentTarget.getBoundingClientRect();
-		let whiteMenu = {
-			menu: name,
-			style: {
-				width: name === 'input' || name === 'Everyone' ? c.width : 'auto',
-				left: name === 'points' ? c.x - 200 : c.x,
-				top: name === 'points' ? c.y - 100 + window.pageYOffset : c.y + c.height + window.pageYOffset,
-			}
-		};
-		this.setState({whiteMenu});
+		
 	}
 
 	closeWhiteMenu = e => {
@@ -99,19 +111,24 @@ export default class Audience extends React.Component {
 		this.closeWhiteMenu();
 	}
 
-	closeModal = e => this.setState({modalDelete: false});
-	
+	closeModalDelete = e => this.setState({modalDelete: false});
+	closeModal = e => this.setState({modal: false});
+
 	render() {
 		return(
-			<div className="audience" onScroll={this.wheel}>
+			<div className="audience">
+				<ModalAudience modal={this.state.modal} close={this.closeModal} />
 				<ModalDelete 
 					modal={this.state.modalDelete}
-                    clickModal={this.closeModal}
+                    clickModal={this.closeModalDelete}
                     title="Delete Contact"
 				/>
-				<WhiteMenu status={this.state.whiteMenu} clickWhiteMenu={this.clickWhiteMenu} />
+				<WhiteMenu status={this.state.whiteMenu}
+					clickWhiteMenu={this.clickWhiteMenu}
+					getWhiteMenu={this.getWhiteMenu}
+				/>
 				<BottomSelect style={this.state.bottomSelect} />
-				<div className="audience-label">Audience</div>
+				<div className="audience-label">{this.state.title}</div>
 				<AudienceHeader moveClick={this.moveClick} 
 					move={this.state.move}
 					getWhiteMenu={this.getWhiteMenu}

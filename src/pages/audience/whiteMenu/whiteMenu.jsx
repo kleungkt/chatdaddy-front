@@ -39,7 +39,7 @@ export default props => {
                             <img className="everyone-cross" src={cross} alt="cross" />
                         </div>
                     ))}
-                    <div className="everyone-new">Add New Segment</div>
+                    <div className="everyone-new" onClick={props.getWhiteMenu.bind(this, 'Add New Segment')}>Add New Segment</div>
                 </div>
             : rows[name].map((key, index) => (
                 <div onClick={props.clickWhiteMenu} key={index} className="white-menu-row">{key}</div>
