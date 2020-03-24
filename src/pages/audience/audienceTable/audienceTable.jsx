@@ -15,7 +15,7 @@ export default props => {
     const body = () => (
         <div className="main-body">
             {tbody(props.status).map((row, index) => (
-                <div key={index} className="main-row">
+                <div key={index} className="main-row" onClick={props.tableRowClick}>
                     <div style={{width: '80px'}} className="main-row-div"
                         onClick={props.check.bind(this, index)}
                     >

@@ -8,10 +8,13 @@ import BottomMenu from './bottomMenu/bottomMenu';
 import BottomSelect from './bottomSelect/bottomSelect';
 import WhiteMenu from './whiteMenu/whiteMenu';
 import ModalAudience from './modalAudience/modalAudience';
+import AudienceRightMenu from './audienceRightMenu/audienceRightMenu';
 
 export default class Audience extends React.Component {
 
 	state = {
+		rightMenu: false,
+		group: true,
 		title: 'Audience',
 		modalDelete: false,
 		checked: {},
@@ -114,9 +117,19 @@ export default class Audience extends React.Component {
 	closeModalDelete = e => this.setState({modalDelete: false});
 	closeModal = e => this.setState({modal: false});
 
+	tableRowClick = e => {
+		this.state.rightMenu ? this.setState({rightMenu: false}) : this.setState({rightMenu: true});
+	}
+
+	groupClick = e => this.state.group ? this.setState({group: false}) : this.setState({group: true});
+
 	render() {
 		return(
 			<div className="audience">
+				<AudienceRightMenu open={this.state.rightMenu} 
+					group={this.state.group}
+					groupClick={this.groupClick}
+				/>
 				<ModalAudience modal={this.state.modal} close={this.closeModal} />
 				<ModalDelete 
 					modal={this.state.modalDelete}
@@ -136,7 +149,8 @@ export default class Audience extends React.Component {
 				<AudienceTable 
 					check={this.check} 
 					getWhiteMenu={this.getWhiteMenu} 
-					checked={this.state.checked} 
+					checked={this.state.checked}
+					tableRowClick={this.tableRowClick}
 				/>
 				<Pagination />
 				<BottomMenu length={Object.keys(this.state.checked).length} 
