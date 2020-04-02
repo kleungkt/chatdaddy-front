@@ -1,0 +1,37 @@
+.audience-header-move {
+    width: 105px;
+    height: 25px;
+    background-color: #0092c3;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    color: #ffffff;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-left: 30px;
+    transition: 0.3s;
+}
+
+.audience-move {
+    padding-left: 20px;
+    background-color: #009f8e;
+}
+
+.audience-header-round {
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background-color: #ffffff;
+    box-shadow: -17px 3px 15px 2px #edf0f2;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.audience-header-round-right {
+    left: 80px;
+    box-shadow: 3px 3px 5px 2px #edf0f2;
+}

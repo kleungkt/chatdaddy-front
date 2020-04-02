@@ -1,11 +1,11 @@
 import React from 'react';
-import './audienceRightMenu.css';
-import userImg from '../../../user.png';
+import './userPanel.css';
+import userImg from '../../user.png';
 import plus from './img/plus.png';
 import plus1 from './img/plus1.png';
 import arrowLeft from './img/arrowLeft.png';
 import arrowRight from './img/arrowRight.png';
-import group from '../../../components/table/img/user.png';
+import group from '../table/img/user.png';
 
 const status = ['Oysters', 'VIP', 'Super Responsive', 'PrimarySchoolMate'];
 const info = ['Warm Score', 'Message Sent', 'Message Received'];
@@ -24,7 +24,7 @@ const users = () => {
 export default props => {
 
     return(
-        <div style={{display: props.open ? 'block' : 'none'}} className="audience-right-menu">
+        <div style={props.style} className="audience-right-menu">
             <img src={userImg} alt="user" className="audience-user-menu" 
                 onClick={props.groupClick}
             />

@@ -8,12 +8,12 @@ import BottomMenu from './bottomMenu/bottomMenu';
 import BottomSelect from './bottomSelect/bottomSelect';
 import WhiteMenu from './whiteMenu/whiteMenu';
 import ModalAudience from './modalAudience/modalAudience';
-import AudienceRightMenu from './audienceRightMenu/audienceRightMenu';
+import UserPanel from '../../components/userPanel/userPanel';
 
 export default class Audience extends React.Component {
 
 	state = {
-		rightMenu: false,
+		rightMenu: {display: 'none'},
 		group: true,
 		title: 'Audience',
 		modalDelete: false,
@@ -118,7 +118,9 @@ export default class Audience extends React.Component {
 	closeModal = e => this.setState({modal: false});
 
 	tableRowClick = e => {
-		this.state.rightMenu ? this.setState({rightMenu: false}) : this.setState({rightMenu: true});
+		const rightMenu = {...this.state.rightMenu};
+		rightMenu.display = rightMenu.display === 'block' ? 'none' : 'block';
+		this.setState({rightMenu})
 	}
 
 	groupClick = e => this.state.group ? this.setState({group: false}) : this.setState({group: true});
@@ -126,7 +128,7 @@ export default class Audience extends React.Component {
 	render() {
 		return(
 			<div className="audience">
-				<AudienceRightMenu open={this.state.rightMenu} 
+				<UserPanel style={this.state.rightMenu} 
 					group={this.state.group}
 					groupClick={this.groupClick}
 				/>

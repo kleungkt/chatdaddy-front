@@ -1,0 +1,118 @@
+.dashboard {
+    padding: 29px 44px
+}
+
+.dashboard-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #374E65;
+}
+
+.dashboard-menu-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 26px;
+}
+
+.dashboard-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 243px;
+    box-sizing: border-box;
+    padding: 11px 15px;
+    background: #F7FAFC 0% 0% no-repeat padding-box;
+    border-radius: 13px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #374E65;
+    user-select: none;
+    cursor: pointer;
+}
+
+.dashboard-menu-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 24px 0 35px;
+    font-size: 24px;
+    color: #374E65;
+}
+
+.dashboard-dl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 199px;
+    height: 52px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 10px 10px 30px #0000000D;
+    border-radius: 17px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #374E65;
+    cursor: pointer;
+}
+
+.dashboard-chart-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.dashboard-chart {
+    margin-top: 40px;
+    width: 455px;
+    height: 270px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.dashboard-chart-label {
+    font-size: 24px;
+    color: #374E65;
+}
+
+.dashboard-chart-total {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1192C4;
+    margin-bottom: 20px;
+}
+
+.dashboard-chart-bottom {
+    border-top: 1px solid #90A8BE;
+    padding-top: 27px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    color: #90A8BE;
+}
+
+.dashboard-chart-bars {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.dashboard-chart-bars span {
+    font-size: 18px;
+    color: #374E65;
+    width: 100px;
+    font-weight: 700;
+}
+
+.dashboard-chart-bars div {
+    background-color: #1192C4;
+    height: 10px;
+}

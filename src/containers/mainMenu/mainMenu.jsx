@@ -18,7 +18,7 @@ const mainMenu = props => {
             <MainLogo />
             <div className="main-menu-center">
                 <MainMenuNavigation menu={menu} />
-                {loc === '/message' ?
+                {loc === '/message' || loc === '/data' ?
                     <User user={props.user} />
                 : <MainMenuOptions />}
             </div>
