@@ -7,7 +7,7 @@ import AudienceTable from './audienceTable/audienceTable';
 import BottomMenu from './bottomMenu/bottomMenu';
 import BottomSelect from './bottomSelect/bottomSelect';
 import WhiteMenu from './whiteMenu/whiteMenu';
-import ModalAudience from './modalAudience/modalAudience';
+import ModalAudience from '../../containers/modals/modals';
 import UserPanel from '../../components/userPanel/userPanel';
 
 export default class Audience extends React.Component {
@@ -79,7 +79,6 @@ export default class Audience extends React.Component {
 		if(name === 'input' && !e.currentTarget.value) {
 			this.closeWhiteMenu(); return;
 		}
-		console.log(name)
 		switch(name) {
 			case 'Add contact' :
 			case 'Search Message History' :

@@ -80,5 +80,22 @@ export const content = {
 				</div>
 			</div>
 		)
+	},
+	'Add New Segment-mess': {
+		size: [715, 580],
+		button: 'Save',
+		content: (
+			<div>
+				{input('Segment Name')}
+				{labelOne('All of the following conditions')}
+				<div className="modalaudience-row-wrap">
+					{selectOne('Warm Score', 300)}
+					{selectOne('Cold', 290)}
+				</div>
+				<div className="modal-small-plus bplus">
+					<img src={bplus} alt="plus" />
+				</div>
+			</div>
+		)
 	}
 } 

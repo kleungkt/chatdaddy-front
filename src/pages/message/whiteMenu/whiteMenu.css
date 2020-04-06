@@ -1,0 +1,115 @@
+.white-menu {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 3px 3px 30px 3px #edf0f2;
+    color: #324d65;
+    font-size: 18px;
+    position: absolute;
+    z-index: 1100;
+    color: #324d65;
+    user-select: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.white-menu-row {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.white-menu-row:hover {
+    color: #0092c3
+}
+
+.white-menu-list {
+    border-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 15px 15px 30px 3px #edf0f2;
+}
+
+.menu-input-top {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.menu-user-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.everyone-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.everyone-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #324d65;
+}
+
+.everyone-desc {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #9ab1c4
+}
+
+.everyone-cross {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.everyone-new {
+    box-shadow: 3px 3px 15px 2px #edf0f2;
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: none;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.white-menu-select {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
+    color: #324d65;
+}
+
+.white-menu-select-one {
+    padding: 10px;
+    background-color: #f7fafc;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.white-menu-select-one div {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.white-menu-send {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.white-menu-send img {
+    width: 14px;
+    height: 9px;
+    margin-left: 10px;
+}

@@ -1,0 +1,36 @@
+.message-image {
+    width: 300px;
+    height: 175px;
+    border-radius: 15px;
+    border: 15px solid #ffffff;
+    box-sizing: border-box;
+} 
+
+.one-message {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.messages-arrow {
+    width: 11px;
+    height: 7px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.one-message div {
+    padding: 10px;
+    border-radius: 10px;
+    color: #405a70;
+}
+
+.messages-left {
+    background-color: #ffffff;
+}
+
+.messages-right {
+    background-color: #dceff1;
+}
